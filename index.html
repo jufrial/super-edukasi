@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sampul</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
-    a, button { margin-top: 20px; display: inline-block; font-size: 18px; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sampul Super Edukasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f0f0f0;
+    }
+    a, button {
+      display: inline-block;
+      font-size: 18px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Selamat Datang di Super Edukasi</h1>
-  <a href="#" onclick="mulaiBelajar()">📘 Mulai Belajar</a>
+  <h1>Selamat Datang di Super Edukasi</h1>
 
-  <div style="margin-top:30px;">
-    <input type="text" id="kodeInput" placeholder="Masukkan kode">
-    <button onclick="cekKode()">Kirim</button>
-  </div>
+  <a href="#" onclick="tampilkanIklanDanMasuk()">📘 Mulai Belajar</a>
 
-  <script>
-    function mulaiBelajar() {
-      tampilkanIklan(); // trigger iklan lebih stabil
-      window.location.href = "bab1.html";
-    }
+  <div style="margin-top:30px;">
+    <input type="text" id="kodeInput" placeholder="Masukkan kode">
+    <button onclick="cekKode()">Kirim</button>
+  </div>
 
-    function cekKode() {
-      var kode = document.getElementById("kodeInput").value;
-      if (kode === "iklan123") {
-        tampilkanIklan();
-        window.location.href = "iklan.html";
-      } else {
-        alert("Kode salah!");
-      }
-    }
+  <script>
+    function tampilkanIklanDanMasuk() {
+      var uid = '492197';
+      var wid = '742719';
+      var pop_tag = document.createElement('script');
+      pop_tag.src = 'https://cdn.popcash.net/pop.js';
+      document.body.appendChild(pop_tag);
 
-    function tampilkanIklan() {
-      var uid = '492197';
-      var wid = '742719';
-      var pop_tag = document.createElement('script');
-      pop_tag.src = 'https://cdn.popcash.net/pop.js';
-      document.body.appendChild(pop_tag);
-    }
-  </script>
+      // Buka bab1 setelah jeda 2 detik agar iklan bisa muncul
+      setTimeout(() => {
+        window.location.href = 'bab1.html';
+      }, 2000);
+    }
+
+    function cekKode() {
+      var kode = document.getElementById("kodeInput").value;
+      if (kode === "iklan123") {
+        tampilkanIklan();
+        setTimeout(() => {
+          window.location.href = 'iklan.html';
+        }, 2000);
+      } else {
+        alert("Kode salah!");
+      }
+    }
+
+    function tampilkanIklan() {
+      var uid = '492197';
+      var wid = '742719';
+      var pop_tag = document.createElement('script');
+      pop_tag.src = 'https://cdn.popcash.net/pop.js';
+      document.body.appendChild(pop_tag);
+    }
+  </script>
 </body>
 </html>
