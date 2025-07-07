@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ppck-ver" content="763edd09c89fa25443fa90b98b61dca2">
-  <title>Bab 2 - Pengurangan Dasar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 2 – Faktor dan Kelipatan</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #isiBab2 {
+      display: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+    }
+    #isiBab2.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bab 2: Pengurangan Dasar</h1>
-    <p>Konten edukasi ringan tentang pengurangan dasar untuk siswa SD.</p>
-    <a href="bab1.html" class="next-button">⬅️ Kembali ke Bab 1</a>
-    <a href="bab3.html" class="next-button">➡️ Lanjut Bab 3</a>
+    <div id="coverBab2">
+      <h1>Bab 2: Faktor dan Kelipatan</h1>
+      <p>Belajar tentang faktor dari suatu bilangan dan kelipatan.</p>
+      <button onclick="mulaiBab2()" class="next-button">📖 Buka Lembar Bab 2</button>
+      <br /><br />
+      <a href="bab1.html" class="prev-button">⬅️ Kembali ke Bab 1</a>
+    </div>
+    <div id="isiBab2">
+      <ul><li>Faktor dari 12: 1, 2, 3, 4, 6, 12</li><li>Kelipatan dari 5: 5, 10, 15, ...</li></ul>
+      <br />
+      <a href="bab3.html" class="next-button">➡️ Lanjut ke Bab 3</a><br />
+      <a href="bab1.html" class="prev-button">⬅️ Kembali ke Bab 1</a>
+    </div>
   </div>
-  <script src="https://example.popcash.net/script.js"></script>
+  <script>
+    function mulaiBab2() {
+      document.getElementById("coverBab2").style.display = "none";
+      const isi = document.getElementById("isiBab2");
+      isi.classList.add("active");
+    }
+  </script>
+  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

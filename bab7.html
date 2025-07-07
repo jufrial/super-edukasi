@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ppck-ver" content="763edd09c89fa25443fa90b98b61dca2">
-  <title>Bab 7 - Waktu dan Jam</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 7 – Bangun Datar</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #isiBab7 {
+      display: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+    }
+    #isiBab7.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bab 7: Waktu dan Jam</h1>
-    <p>Konten edukasi ringan tentang waktu dan jam untuk siswa SD.</p>
-    <a href="bab6.html" class="next-button">⬅️ Kembali ke Bab 6</a>
-    <a href="bab8.html" class="next-button">➡️ Lanjut Bab 8</a>
+    <div id="coverBab7">
+      <h1>Bab 7: Bangun Datar</h1>
+      <p>Mengenal persegi, persegi panjang, segitiga, dan lingkaran.</p>
+      <button onclick="mulaiBab7()" class="next-button">📖 Buka Lembar Bab 7</button>
+      <br /><br />
+      <a href="bab6.html" class="prev-button">⬅️ Kembali ke Bab 6</a>
+    </div>
+    <div id="isiBab7">
+      <ul><li>Luas persegi = sisi × sisi</li><li>Luas segitiga = 1/2 × alas × tinggi</li></ul>
+      <br />
+      <a href="bab8.html" class="next-button">➡️ Lanjut ke Bab 8</a><br />
+      <a href="bab6.html" class="prev-button">⬅️ Kembali ke Bab 6</a>
+    </div>
   </div>
-  <script src="https://example.popcash.net/script.js"></script>
+  <script>
+    function mulaiBab7() {
+      document.getElementById("coverBab7").style.display = "none";
+      const isi = document.getElementById("isiBab7");
+      isi.classList.add("active");
+    }
+  </script>
+  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

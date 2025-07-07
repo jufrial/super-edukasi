@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ppck-ver" content="763edd09c89fa25443fa90b98b61dca2">
-  <title>Bab 5 - Pengukuran Panjang</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 5 – Pengukuran</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #isiBab5 {
+      display: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+    }
+    #isiBab5.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bab 5: Pengukuran Panjang</h1>
-    <p>Konten edukasi ringan tentang pengukuran panjang untuk siswa SD.</p>
-    <a href="bab4.html" class="next-button">⬅️ Kembali ke Bab 4</a>
-    <a href="bab6.html" class="next-button">➡️ Lanjut Bab 6</a>
+    <div id="coverBab5">
+      <h1>Bab 5: Pengukuran</h1>
+      <p>Pengukuran waktu, panjang, berat.</p>
+      <button onclick="mulaiBab5()" class="next-button">📖 Buka Lembar Bab 5</button>
+      <br /><br />
+      <a href="bab4.html" class="prev-button">⬅️ Kembali ke Bab 4</a>
+    </div>
+    <div id="isiBab5">
+      <ul><li>1 meter = 100 cm</li><li>1 kg = 1000 gram</li></ul>
+      <br />
+      <a href="bab6.html" class="next-button">➡️ Lanjut ke Bab 6</a><br />
+      <a href="bab4.html" class="prev-button">⬅️ Kembali ke Bab 4</a>
+    </div>
   </div>
-  <script src="https://example.popcash.net/script.js"></script>
+  <script>
+    function mulaiBab5() {
+      document.getElementById("coverBab5").style.display = "none";
+      const isi = document.getElementById("isiBab5");
+      isi.classList.add("active");
+    }
+  </script>
+  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

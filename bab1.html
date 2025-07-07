@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bab 1 – Bilangan Cacah</title>
+  <title>Bab 1 – Bilangan Cacah dan Operasi Hitung</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Tambahan animasi slide */
     #isiBab1 {
       display: none;
       opacity: 0;
       transform: translateX(100%);
       transition: all 0.6s ease;
     }
-
     #isiBab1.active {
       display: block;
       opacity: 1;
@@ -23,53 +21,20 @@
 </head>
 <body>
   <div class="container">
-
-    <!-- ✅ COVER BAB -->
     <div id="coverBab1">
       <h1>Bab 1: Bilangan Cacah dan Operasi Hitung</h1>
-      <p>
-        Pada bab ini kamu akan belajar tentang bilangan cacah serta operasi dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.
-      </p>
+      <p>Pada bab ini kamu akan belajar tentang bilangan cacah serta operasi dasar.</p>
       <button onclick="mulaiBab1()" class="next-button">📖 Buka Lembar Bab 1</button>
       <br /><br />
-      <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a>
+      <a href="babindex.html" class="prev-button">⬅️ Kembali ke Bab index</a>
     </div>
-
-    <!-- ✅ ISI PELAJARAN -->
     <div id="isiBab1">
-      <h2>Apa Itu Bilangan Cacah?</h2>
-      <p>
-        Bilangan cacah adalah bilangan bulat yang dimulai dari 0, 1, 2, 3, dan seterusnya.
-        Bilangan ini tidak memiliki bagian pecahan dan tidak negatif.
-      </p>
-
-      <h3>🔹 Contoh Bilangan Cacah:</h3>
-      <ul>
-        <li>0, 1, 2, 3, 4, 5, ...</li>
-      </ul>
-
-      <h3>🔸 Operasi Hitung Dasar:</h3>
-      <ul>
-        <li>Penjumlahan: 4 + 5 = 9</li>
-        <li>Pengurangan: 10 − 3 = 7</li>
-        <li>Perkalian: 3 × 2 = 6</li>
-        <li>Pembagian: 12 ÷ 4 = 3</li>
-      </ul>
-
-      <h3>🎯 Latihan Singkat:</h3>
-      <p>1. Hitunglah 25 + 13 = ...</p>
-      <p>2. Hitunglah 30 − 15 = ...</p>
-      <p>3. Hitunglah 6 × 4 = ...</p>
-      <p>4. Hitunglah 20 ÷ 5 = ...</p>
-
+      <h2>Apa Itu Bilangan Cacah?</h2><p>Bilangan cacah dimulai dari 0, 1, 2, 3, dst...</p>
       <br />
       <a href="bab2.html" class="next-button">➡️ Lanjut ke Bab 2</a><br />
-      <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a>
+      <a href="babindex.html" class="prev-button">⬅️ Kembali ke Bab index</a>
     </div>
-
   </div>
-
-  <!-- JS: efek transisi -->
   <script>
     function mulaiBab1() {
       document.getElementById("coverBab1").style.display = "none";
@@ -77,8 +42,6 @@
       isi.classList.add("active");
     }
   </script>
-
-  <!-- PopCash -->
   <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

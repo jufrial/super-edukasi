@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ppck-ver" content="763edd09c89fa25443fa90b98b61dca2">
-  <title>Bab 9 - Pecahan Sederhana</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 9 – Data dan Diagram</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #isiBab9 {
+      display: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+    }
+    #isiBab9.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bab 9: Pecahan Sederhana</h1>
-    <p>Konten edukasi ringan tentang pecahan sederhana untuk siswa SD.</p>
-    <a href="bab8.html" class="next-button">⬅️ Kembali ke Bab 8</a>
-    <a href="bab10.html" class="next-button">➡️ Lanjut Bab 10</a>
+    <div id="coverBab9">
+      <h1>Bab 9: Data dan Diagram</h1>
+      <p>Pengumpulan dan penyajian data.</p>
+      <button onclick="mulaiBab9()" class="next-button">📖 Buka Lembar Bab 9</button>
+      <br /><br />
+      <a href="bab8.html" class="prev-button">⬅️ Kembali ke Bab 8</a>
+    </div>
+    <div id="isiBab9">
+      <ul><li>Diagram batang</li><li>Diagram lingkaran</li></ul>
+      <br />
+      <a href="bab10.html" class="next-button">➡️ Lanjut ke Bab 10</a><br />
+      <a href="bab8.html" class="prev-button">⬅️ Kembali ke Bab 8</a>
+    </div>
   </div>
-  <script src="https://example.popcash.net/script.js"></script>
+  <script>
+    function mulaiBab9() {
+      document.getElementById("coverBab9").style.display = "none";
+      const isi = document.getElementById("isiBab9");
+      isi.classList.add("active");
+    }
+  </script>
+  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

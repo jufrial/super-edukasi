@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ppck-ver" content="763edd09c89fa25443fa90b98b61dca2">
-  <title>Bab 6 - Berat dan Timbangan</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 6 – Satuan Waktu dan Panjang</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #isiBab6 {
+      display: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+    }
+    #isiBab6.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bab 6: Berat dan Timbangan</h1>
-    <p>Konten edukasi ringan tentang berat dan timbangan untuk siswa SD.</p>
-    <a href="bab5.html" class="next-button">⬅️ Kembali ke Bab 5</a>
-    <a href="bab7.html" class="next-button">➡️ Lanjut Bab 7</a>
+    <div id="coverBab6">
+      <h1>Bab 6: Satuan Waktu dan Panjang</h1>
+      <p>Konversi antar satuan waktu dan panjang.</p>
+      <button onclick="mulaiBab6()" class="next-button">📖 Buka Lembar Bab 6</button>
+      <br /><br />
+      <a href="bab5.html" class="prev-button">⬅️ Kembali ke Bab 5</a>
+    </div>
+    <div id="isiBab6">
+      <ul><li>1 jam = 60 menit</li><li>2 km = 2000 meter</li></ul>
+      <br />
+      <a href="bab7.html" class="next-button">➡️ Lanjut ke Bab 7</a><br />
+      <a href="bab5.html" class="prev-button">⬅️ Kembali ke Bab 5</a>
+    </div>
   </div>
-  <script src="https://example.popcash.net/script.js"></script>
+  <script>
+    function mulaiBab6() {
+      document.getElementById("coverBab6").style.display = "none";
+      const isi = document.getElementById("isiBab6");
+      isi.classList.add("active");
+    }
+  </script>
+  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>
