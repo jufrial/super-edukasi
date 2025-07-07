@@ -1,55 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bab 1 – Bilangan Cacah dan Operasi Hitung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bab 1: Bilangan Cacah dan Operasi Hitung</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #isiBab1 {
-      display: none;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.6s ease;
-    }
-    #isiBab1.active {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div id="coverBab1">
-      <h1>Bab 1: Bilangan Cacah dan Operasi Hitung</h1>
-      <p>Pada bab ini kamu akan belajar tentang bilangan cacah serta operasi dasar.</p>
-      <button onclick="mulaiBab1()" class="next-button">📖 Buka Lembar Bab 1</button>
-      <br /><br />
-      <a href="babindex.html" class="prev-button">⬅️ Kembali ke Sampul</a>
-    </div>
-    <div id="isiBab1">
-      <h2>Apa Itu Bilangan Cacah?</h2>
-    <p>Bilangan cacah adalah himpunan bilangan bulat positif termasuk nol: 0, 1, 2, 3, dan seterusnya. Bilangan cacah digunakan dalam kehidupan sehari-hari seperti menghitung benda.</p>
-    <h3>Operasi Hitung Bilangan Cacah:</h3>
-    <ul>
-        <li><strong>Penjumlahan:</strong> 345 + 267 = 612</li>
-        <li><strong>Pengurangan:</strong> 780 − 215 = 565</li>
-        <li><strong>Perkalian:</strong> 24 × 3 = 72</li>
-        <li><strong>Pembagian:</strong> 96 ÷ 8 = 12</li>
-    </ul>
-      <br />
-      <a href="bab2.html" class="next-button">➡️ Lanjut ke Bab 2</a><br />
-      <a href="babindex.html" class="prev-button">⬅️ Kembali ke Sampul</a>
-    </div>
+    <h1>Bab 1</h1>
+    <h2>Bilangan Cacah dan Operasi Hitung</h2>
+    <p>Bilangan cacah adalah 0, 1, 2, 3, ... Operasi hitung meliputi tambah, kurang, kali, bagi.</p>
+    <br/>
+    <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a><br/>
+    <a href="bab2.html" class="next-button">➡️ Lanjut ke Bab 2</a>
   </div>
-  <script>
-    function mulaiBab1() {
-      document.getElementById("coverBab1").style.display = "none";
-      const isi = document.getElementById("isiBab1");
-      isi.classList.add("active");
-    }
+
+  <!-- PopCash Script -->
+  <script type="text/javascript">
+    var uid = '492197';
+    var wid = '742719';
+    var pop_tag = document.createElement('script');
+    pop_tag.src = '//cdn.popcash.net/show.js';
+    document.body.appendChild(pop_tag);
+    pop_tag.onerror = function () {
+      pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn2.popcash.net/show.js';
+      document.body.appendChild(pop_tag);
+    };
   </script>
-  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

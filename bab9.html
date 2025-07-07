@@ -1,52 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bab 9 – Data dan Diagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bab 9: Data dan Diagram</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #isiBab9 {
-      display: none;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.6s ease;
-    }
-    #isiBab9.active {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div id="coverBab9">
-      <h1>Bab 9: Data dan Diagram</h1>
-      <p>Pengumpulan dan penyajian data.</p>
-      <button onclick="mulaiBab9()" class="next-button">📖 Buka Lembar Bab 9</button>
-      <br /><br />
-      <a href="bab8.html" class="prev-button">⬅️ Kembali ke Bab 8</a>
-    </div>
-    <div id="isiBab9">
-      <h2>Data dan Diagram</h2>
-    <p>Data dapat disajikan dalam tabel, diagram batang, dan diagram lingkaran.</p>
-    <ul>
-        <li>Contoh: Jumlah siswa per kelas</li>
-        <li>Diagram batang menunjukkan data dalam bentuk kotak-kotak tegak</li>
-    </ul>
-      <br />
-      <a href="bab10.html" class="next-button">➡️ Lanjut ke Bab 10</a><br />
-      <a href="bab8.html" class="prev-button">⬅️ Kembali ke Bab 8</a>
-    </div>
+    <h1>Bab 9</h1>
+    <h2>Data dan Diagram</h2>
+    <p>Data dapat disajikan dalam diagram batang atau lingkaran.</p>
+    <br/>
+    <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a><br/>
+    <a href="bab10.html" class="next-button">➡️ Lanjut ke Bab 10</a>
   </div>
-  <script>
-    function mulaiBab9() {
-      document.getElementById("coverBab9").style.display = "none";
-      const isi = document.getElementById("isiBab9");
-      isi.classList.add("active");
-    }
+
+  <!-- PopCash Script -->
+  <script type="text/javascript">
+    var uid = '492197';
+    var wid = '742719';
+    var pop_tag = document.createElement('script');
+    pop_tag.src = '//cdn.popcash.net/show.js';
+    document.body.appendChild(pop_tag);
+    pop_tag.onerror = function () {
+      pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn2.popcash.net/show.js';
+      document.body.appendChild(pop_tag);
+    };
   </script>
-  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

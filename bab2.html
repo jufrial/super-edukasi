@@ -1,54 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bab 2 – Faktor dan Kelipatan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bab 2: Faktor dan Kelipatan</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #isiBab2 {
-      display: none;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.6s ease;
-    }
-    #isiBab2.active {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div id="coverBab2">
-      <h1>Bab 2: Faktor dan Kelipatan</h1>
-      <p>Belajar tentang faktor dari suatu bilangan dan kelipatan.</p>
-      <button onclick="mulaiBab2()" class="next-button">📖 Buka Lembar Bab 2</button>
-      <br /><br />
-      <a href="bab1.html" class="prev-button">⬅️ Kembali ke Bab 1</a>
-    </div>
-    <div id="isiBab2">
-      <h2>Faktor dan Kelipatan</h2>
-    <p>Faktor adalah bilangan yang membagi habis suatu bilangan. Kelipatan adalah hasil perkalian bilangan tersebut dengan bilangan bulat positif.</p>
-    <h3>Contoh:</h3>
-    <ul>
-        <li>Faktor dari 12: 1, 2, 3, 4, 6, 12</li>
-        <li>Kelipatan dari 4: 4, 8, 12, 16, ...</li>
-    </ul>
-    <p>KPK dan FPB juga dibahas di bab ini dengan metode pohon faktor dan tabel.</p>
-      <br />
-      <a href="bab3.html" class="next-button">➡️ Lanjut ke Bab 3</a><br />
-      <a href="bab1.html" class="prev-button">⬅️ Kembali ke Bab 1</a>
-    </div>
+    <h1>Bab 2</h1>
+    <h2>Faktor dan Kelipatan</h2>
+    <p>Faktor dan kelipatan digunakan untuk mencari KPK dan FPB.</p>
+    <br/>
+    <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a><br/>
+    <a href="bab3.html" class="next-button">➡️ Lanjut ke Bab 3</a>
   </div>
-  <script>
-    function mulaiBab2() {
-      document.getElementById("coverBab2").style.display = "none";
-      const isi = document.getElementById("isiBab2");
-      isi.classList.add("active");
-    }
+
+  <!-- PopCash Script -->
+  <script type="text/javascript">
+    var uid = '492197';
+    var wid = '742719';
+    var pop_tag = document.createElement('script');
+    pop_tag.src = '//cdn.popcash.net/show.js';
+    document.body.appendChild(pop_tag);
+    pop_tag.onerror = function () {
+      pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn2.popcash.net/show.js';
+      document.body.appendChild(pop_tag);
+    };
   </script>
-  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>

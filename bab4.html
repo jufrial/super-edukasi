@@ -1,53 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bab 4 – Desimal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bab 4: Desimal</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #isiBab4 {
-      display: none;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.6s ease;
-    }
-    #isiBab4.active {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div id="coverBab4">
-      <h1>Bab 4: Desimal</h1>
-      <p>Bilangan desimal dan cara menghitungnya.</p>
-      <button onclick="mulaiBab4()" class="next-button">📖 Buka Lembar Bab 4</button>
-      <br /><br />
-      <a href="bab3.html" class="prev-button">⬅️ Kembali ke Bab 3</a>
-    </div>
-    <div id="isiBab4">
-      <h2>Desimal</h2>
-    <p>Bilangan desimal menyatakan nilai pecahan dalam bentuk titik desimal. Contohnya 0.5 adalah setengah.</p>
-    <h3>Operasi dengan desimal:</h3>
-    <ul>
-        <li>Penjumlahan: 1.2 + 3.4 = 4.6</li>
-        <li>Pengurangan: 5.6 − 2.1 = 3.5</li>
-    </ul>
-      <br />
-      <a href="bab5.html" class="next-button">➡️ Lanjut ke Bab 5</a><br />
-      <a href="bab3.html" class="prev-button">⬅️ Kembali ke Bab 3</a>
-    </div>
+    <h1>Bab 4</h1>
+    <h2>Desimal</h2>
+    <p>Desimal adalah bentuk pecahan dengan titik, seperti 0.5 atau 1.25.</p>
+    <br/>
+    <a href="index.html" class="prev-button">⬅️ Kembali ke Sampul</a><br/>
+    <a href="bab5.html" class="next-button">➡️ Lanjut ke Bab 5</a>
   </div>
-  <script>
-    function mulaiBab4() {
-      document.getElementById("coverBab4").style.display = "none";
-      const isi = document.getElementById("isiBab4");
-      isi.classList.add("active");
-    }
+
+  <!-- PopCash Script -->
+  <script type="text/javascript">
+    var uid = '492197';
+    var wid = '742719';
+    var pop_tag = document.createElement('script');
+    pop_tag.src = '//cdn.popcash.net/show.js';
+    document.body.appendChild(pop_tag);
+    pop_tag.onerror = function () {
+      pop_tag = document.createElement('script');
+      pop_tag.src = '//cdn2.popcash.net/show.js';
+      document.body.appendChild(pop_tag);
+    };
   </script>
-  <script src="https://c1.popcash.net/pop.js"></script>
 </body>
 </html>
