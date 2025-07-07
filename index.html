@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sampul Super Edukasi</title>
+  <title>Super Edukasi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
 <body>
   <h1>Selamat Datang di Super Edukasi</h1>
 
-  <a href="#" onclick="tampilkanIklanDanMasuk()">📘 Mulai Belajar</a>
+  <a href="#" onclick="mulaiBelajar()">📘 Mulai Belajar</a>
 
   <div style="margin-top:30px;">
     <input type="text" id="kodeInput" placeholder="Masukkan kode">
@@ -39,72 +39,37 @@
   </div>
 
   <script>
-    function tampilkanIklanDanMasuk() {
-      var uid = '492197';
-      var wid = '742719';
-
-      // Buka tab kosong
-      var newTab = window.open('', '_blank');
-
-      // Isi tab dengan HTML yang memuat iklan dan redirect
-      var content = `
-        <html>
-          <head><title>Menyiapkan Iklan...</title></head>
-          <body>
-            <p>Memuat iklan, silakan tunggu sebentar...</p>
-            <script>
-              var uid = '${uid}';
-              var wid = '${wid}';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = 'https://cdn.popcash.net/pop.js';
-              document.body.appendChild(pop_tag);
-              setTimeout(function() {
-                window.location.href = 'https://super-edukasi.vercel.app/bab1.html';
-              }, 2000);
-            <\/script>
-          </body>
-        </html>
-      `;
-
-      newTab.document.write(content);
-      newTab.document.close();
+    function mulaiBelajar() {
+      window.location.href = 'bab1.html';
     }
 
     function cekKode() {
-      var kode = document.getElementById("kodeInput").value;
+      const kode = document.getElementById("kodeInput").value;
       if (kode === "iklan123") {
-        tampilkanIklanKeIklanHtml();
+        window.location.href = "iklan.html";
       } else {
         alert("Kode salah!");
       }
     }
+  </script>
 
-    function tampilkanIklanKeIklanHtml() {
-      var uid = '492197';
-      var wid = '742719';
+  <!-- ✅ SCRIPT IKLAN POPUNDER.NET -->
+  <script type="text/javascript">
+    var _pop = _pop || [];
+    _pop.push(['siteId', 939444]); // Site ID kamu
+    _pop.push(['popundersPerIP', 1]);
+    _pop.push(['delayBetween', 24]);
+    _pop.push(['default', false]);
+    _pop.push(['top', 100]);
 
-      var newTab = window.open('', '_blank');
-      var content = `
-        <html>
-          <head><title>Menyiapkan Iklan...</title></head>
-          <body>
-            <p>Memuat iklan, silakan tunggu sebentar...</p>
-            <script>
-              var uid = '${uid}';
-              var wid = '${wid}';
-              var pop_tag = document.createElement('script');
-              pop_tag.src = 'https://cdn.popcash.net/pop.js';
-              document.body.appendChild(pop_tag);
-              setTimeout(function() {
-                window.location.href = 'https://super-edukasi.vercel.app/iklan.html';
-              }, 2000);
-            <\/script>
-          </body>
-        </html>
-      `;
-      newTab.document.write(content);
-      newTab.document.close();
-    }
+    (function () {
+      var pa = document.createElement('script');
+      pa.type = 'text/javascript';
+      pa.async = true;
+      pa.src = '//c1.popunder.net/script.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(pa, s);
+    })();
   </script>
 </body>
 </html>
