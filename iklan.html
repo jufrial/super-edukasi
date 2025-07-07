@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tayangan Iklan PopCash</title>
-
-  <!-- Verifikasi Domain PopCash -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menayangkan Iklan PopCash</title>
   <script type="text/javascript">
     var uid = '492197';
   </script>
   <script type="text/javascript" src="https://cdn.popcash.net/pop.js"></script>
-
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      background-color: #111;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
     }
     h1 {
       font-size: 22px;
-      color: #ccc;
+      margin-bottom: 10px;
     }
-    .loading {
-      margin-top: 10px;
+    .note {
       font-size: 14px;
-      color: #999;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Menayangkan Iklan PopCash...</h1>
-  <div class="loading">Iklan diperbarui otomatis setiap 60 detik</div>
-
-  <!-- PopCash Active Ad Script -->
+  <h1>Iklan Sedang Dimuat...</h1>
+  <div class="note">Akan diperbarui otomatis setiap 60 detik.</div>
   <script type="text/javascript">
     var uid = '492197';
     var wid = '742719';
-
-    function loadAd() {
-      var pop_tag = document.createElement('script');
-      pop_tag.src = '//cdn.popcash.net/pop.js?uid=' + uid + '&wid=' + wid + '&ts=' + new Date().getTime();
-      pop_tag.async = true;
-      document.body.appendChild(pop_tag);
+    function tampilIklan() {
+      var s = document.createElement('script');
+      s.src = '//cdn.popcash.net/pop.js?ts=' + Date.now();
+      s.async = true;
+      document.body.appendChild(s);
     }
-
-    // Load iklan pertama
-    loadAd();
-
-    // Refresh iklan setiap 60 detik (1 menit)
-    setInterval(() => {
-      loadAd();
-    }, 60000);
+    tampilIklan();
+    setInterval(tampilIklan, 60000);
   </script>
 </body>
 </html>
