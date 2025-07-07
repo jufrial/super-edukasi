@@ -2,80 +2,28 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sampul Super Edukasi</title>
-  <script type="text/javascript">
-    var uid = '492197';
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sampul</title>
+  <script type="text/javascript">var uid = '492197';</script>
   <script type="text/javascript" src="https://cdn.popcash.net/pop.js"></script>
-  
-<style>
-  body {
-    background: #f9f9f9;
-    font-family: 'Segoe UI', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  a.tombol-iklan {
-    display: block;
-    margin: 30px auto;
-    background: #e63946;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: fit-content;
-    transition: background 0.3s;
-  }
-  a.tombol-iklan:hover {
-    background: #d62839;
-  }
-  ul {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-left: 20px;
-    font-size: 18px;
-  }
-</style>
-
 </head>
 <body>
   <h1>Selamat Datang di Super Edukasi</h1>
-  <p>Silakan mulai pembelajaran dengan memilih bab pertama.</p>
-  <div style="text-align:center;">
-    <a href="bab1.html" class="tombol-iklan">📘 Mulai Bab 1</a>
+  <a href="bab1.html">📘 Mulai Belajar</a>
+  <div style="margin-top:30px;">
+    <input type="text" id="kodeInput" placeholder="Masukkan kode">
+    <button onclick="cekKode()">Kirim</button>
   </div>
-  
-<div class="kode-box">
-  <p>Masukkan Kode:</p>
-  <input type="text" id="kodeInput" placeholder="Masukkan kode di sini">
-  <button class="kode-btn" onclick="cekKode()">Kirim</button>
-</div>
-<script>
-  function cekKode() {
-    var kode = document.getElementById("kodeInput").value.trim();
-    if (kode === "iklan123") {
-      window.location.href = "iklan.html";
-    } else {
-      alert("Kode salah!");
+  <script>
+    function cekKode() {
+      var kode = document.getElementById("kodeInput").value;
+      if (kode === "iklan123") {
+        window.location.href = "iklan.html";
+      } else {
+        alert("Kode salah!");
+      }
     }
-  }
-</script>
-
+  </script>
   <script type="text/javascript">
     var uid = '492197';
     var wid = '742719';
