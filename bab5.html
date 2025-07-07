@@ -55,8 +55,65 @@
 </head>
 <body>
   <h1>Bab 5</h1>
-  <p>Konten pembelajaran untuk Bab 5 akan muncul di sini. Silakan baca dan pahami dengan seksama.</p>
-  <a href="iklan.html" class="tombol-iklan">➤ Lanjutkan ke Halaman Iklan</a>
+  <p>Konten pembelajaran untuk Bab 5. Bacalah dengan seksama untuk memahami materi.</p>
+  
+<div style="margin-top: 40px; text-align: center;">
+  <a href="bab4.html" class="nav-button">⬅️ Bab 4</a>
+  <a href="bab6.html" class="nav-button">➡️ Bab 6</a>
+  <a href="index.html" class="nav-button">🏠 Kembali ke Sampul</a>
+</div>
+<style>
+  .nav-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 18px;
+    background-color: #1d3557;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .nav-button:hover { background-color: #457b9d; }
+  .kode-box {
+    margin-top: 30px;
+    text-align: center;
+  }
+  input[type='text'] {
+    padding: 8px;
+    width: 180px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  button.kode-btn {
+    padding: 8px 14px;
+    margin-left: 6px;
+    background: #e63946;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+
+  
+<div class="kode-box">
+  <p>Masukkan Kode:</p>
+  <input type="text" id="kodeInput" placeholder="Masukkan kode di sini">
+  <button class="kode-btn" onclick="cekKode()">Kirim</button>
+</div>
+<script>
+  function cekKode() {
+    var kode = document.getElementById("kodeInput").value.trim();
+    if (kode === "iklan123") {
+      window.location.href = "iklan.html";
+    } else {
+      alert("Kode salah!");
+    }
+  }
+</script>
+
   <script type="text/javascript">
     var uid = '492197';
     var wid = '742719';

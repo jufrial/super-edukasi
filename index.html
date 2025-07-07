@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Super Edukasi</title>
+  <title>Sampul Super Edukasi</title>
   <script type="text/javascript">
     var uid = '492197';
   </script>
@@ -54,10 +54,28 @@
 
 </head>
 <body>
-  <h1>Super Edukasi: Daftar Bab</h1>
-  <ul>
-    <li><a href="bab1.html">Bab 1</a></li><li><a href="bab2.html">Bab 2</a></li><li><a href="bab3.html">Bab 3</a></li><li><a href="bab4.html">Bab 4</a></li><li><a href="bab5.html">Bab 5</a></li><li><a href="bab6.html">Bab 6</a></li><li><a href="bab7.html">Bab 7</a></li><li><a href="bab8.html">Bab 8</a></li><li><a href="bab9.html">Bab 9</a></li><li><a href="bab10.html">Bab 10</a></li>
-  </ul>
+  <h1>Selamat Datang di Super Edukasi</h1>
+  <p>Silakan mulai pembelajaran dengan memilih bab pertama.</p>
+  <div style="text-align:center;">
+    <a href="bab1.html" class="tombol-iklan">📘 Mulai Bab 1</a>
+  </div>
+  
+<div class="kode-box">
+  <p>Masukkan Kode:</p>
+  <input type="text" id="kodeInput" placeholder="Masukkan kode di sini">
+  <button class="kode-btn" onclick="cekKode()">Kirim</button>
+</div>
+<script>
+  function cekKode() {
+    var kode = document.getElementById("kodeInput").value.trim();
+    if (kode === "iklan123") {
+      window.location.href = "iklan.html";
+    } else {
+      alert("Kode salah!");
+    }
+  }
+</script>
+
   <script type="text/javascript">
     var uid = '492197';
     var wid = '742719';
