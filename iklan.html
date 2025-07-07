@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halaman Iklan</title>
-  <script type="text/javascript">var uid = '492197';</script>
-  <script type="text/javascript" src="https://cdn.popcash.net/pop.js"></script>
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: sans-serif;
-      padding: 2rem;
-      text-align: center;
-    }
-    .box {
-      background: white;
-      padding: 1.5rem;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Iklan</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    .box {
+      background: white;
+      padding: 1.5rem;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Terima Kasih Telah Mendukung</h1>
-    <p>Iklan ini membantu mendanai edukasi gratis. Silakan tunggu sebentar...</p>
-  </div>
-  <script type="text/javascript">
-    var wid = '742719';
-    var pop_tag = document.createElement('script');
-    pop_tag.src = '//cdn.popcash.net/pop.js';
-    document.body.appendChild(pop_tag);
-  </script>
+  <div class="box">
+    <h1>Terima Kasih Telah Mendukung</h1>
+    <p>Iklan ini membantu mendanai edukasi gratis. Silakan tunggu sebentar...</p>
+  </div>
+
+  <script>
+    // Aktifkan PopCash setelah user mengakses halaman
+    window.onload = function() {
+      var uid = '492197';
+      var wid = '742719';
+      var pop_tag = document.createElement('script');
+      pop_tag.src = 'https://cdn.popcash.net/pop.js'; // gunakan HTTPS eksplisit
+      document.body.appendChild(pop_tag);
+    };
+  </script>
 </body>
 </html>
